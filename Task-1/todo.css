@@ -1,0 +1,86 @@
+/* color -- rgb(164, 16, 218) */
+/* color -- #A410DA */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins";
+  gap: 32px;
+  margin-top: 32px;
+  background: rgb(255, 251, 251);
+  height: 100vh;
+}
+.todo-box h1 {
+  font-size: 32px;
+}
+.todo-box,
+.todo-box .cont {
+  position: relative;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: white;
+  border: 2px solid rgba(164, 16, 218, 0.5);
+  border-radius: 12px;
+  padding: 24px;
+}
+.todo-box .cont {
+  flex-direction: row;
+  border: none;
+}
+.text-inp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(164, 16, 218, 0.2);
+  padding: 24px;
+}
+input::placeholder {
+  font-family: "Poppins";
+  font-size: 16px;
+  color: rgba(113, 13, 150, 0.4);
+}
+.add-btn {
+  height: 24px;
+  background: rgb(164, 16, 218);
+  color: white;
+  font-size: 24px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  padding: 24px;
+}
+.title {
+  width: 100%;
+  position: relative;
+  left: 20%;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.empty {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+}
+.empty img {
+  width: 120px;
+}
+
+.no {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.4);
+}

@@ -12,21 +12,33 @@
   </head>
   <body class="root">
     <div class="todo-box">
-      <h1>To Do List</h1>
+      <h1>To<span>Do</span>List<span>.</span></h1>
 
       <div class="cont">
-        <input type="text" placeholder="add list be added" class="text-inp" />
-        <button class="add-btn">
+        <input
+          type="text"
+          name="text-inp"
+          placeholder="add list be added"
+          class="text-inp"
+          id="text-inp"
+        />
+        <button class="add-btn" id="add-btn">
           Add
           <span>
             <i class="fa-solid fa-plus"></i>
           </span>
         </button>
+        <button class="add-btn" id="edit-btn">
+          Update
+          <span>
+            <i class="fa-solid fa-floppy-disk"></i>
+          </span>
+        </button>
       </div>
-      <!-- <div class="title">list Added</div> -->
-      <div class="list-add">
-        <div class="empty">
+      <div class="list-add" id="list-add">
+        <div class="empty" id="empty">
           <img src="/Task-1/asset/add.svg" alt="" />
+
           <p class="no">no list found!</p>
         </div>
       </div>

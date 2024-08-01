@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do-list</title>
+    <link rel="stylesheet" href="/Task-1/todo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="root">
+    <div class="todo-box">
+      <h1>To<span>Do</span>List<span>.</span></h1>
+
+      <div class="cont">
+        <input
+          type="text"
+          name="text-inp"
+          placeholder="add list be added"
+          class="text-inp"
+          id="text-inp"
+        />
+        <button class="add-btn" id="add-btn">
+          Add
+          <span>
+            <i class="fa-solid fa-plus"></i>
+          </span>
+        </button>
+        <button class="add-btn" id="edit-btn">
+          Update
+          <span>
+            <i class="fa-solid fa-floppy-disk"></i>
+          </span>
+        </button>
+      </div>
+      <div class="list-add" id="list-add">
+        <div class="empty" id="empty">
+          <img src="/Task-1/asset/add.svg" alt="" />
+
+          <p class="no">no list found!</p>
+        </div>
+      </div>
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+/* color -- rgb(164, 16, 218) */
+/* color -- #A410DA */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins";
+  gap: 32px;
+  margin-top: 32px;
+  background: rgb(255, 251, 251);
+  height: 100vh;
+}
+.todo-box h1 {
+  font-size: 36px;
+  padding: 12px;
+  margin: 0;
+}
+.todo-box h1 span {
+  color: #a410da;
+}
+.todo-box,
+.todo-box .cont {
+  position: relative;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  background: white;
+  border: 2px solid rgba(164, 16, 218, 0.5);
+  border-radius: 12px;
+  padding: 24px;
+}
+.todo-box .cont {
+  flex-direction: row;
+  gap: 12px;
+  border: none;
+}
+.text-inp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(164, 16, 218, 0.2);
+  padding: 16px;
+}
+input::placeholder {
+  font-family: "Poppins";
+  font-size: 16px;
+  color: rgba(113, 13, 150, 0.4);
+}
+input:focus {
+  outline: none;
+  border: 1.5px solid rgba(164, 16, 218, 0.4);
+}
+.add-btn {
+  height: 24px;
+  background: rgb(164, 16, 218);
+  color: white;
+  font-size: 24px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  padding: 24px;
+}
+.btn:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
+.title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+.empty {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+}
+.empty img {
+  width: 120px;
+}
+
+.no {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.items {
+  width: 98%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+.items .content {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  background: rgba(164, 16, 218, 0.02);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(164, 16, 218, 0.1);
+}
+.content::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.content:focus {
+  border: 1.5px solid rgba(164, 16, 218, 0.7);
+}
+.btns {
+  border: none;
+  background: none;
+}
+.btns:hover i {
+  cursor: pointer;
+  color: #8b10b7;
+}
+.del-btn:hover i {
+  cursor: pointer;
+  color: #8b10b7;
+}
+.btns i {
+  font-size: 24px;
+  color: #a410da;
+}
+#del-btn i {
+  color: red;
+}
+#edit-btn {
+  font-size: 14px;
+  padding: 16px 12px;
+}
+.list-add {
+  width: 70%;
+  max-height: 224px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10%;
+}
+.list-add::-webkit-scrollbar {
+  width: 4px;
+  background: #8b10b70c;
+}
+.list-add::-webkit-scrollbar-button {
+  background: #a410da25;
+}
+.list-add::-webkit-scrollbar-thumb {
+  background: #a410dab3;
+  border-radius: 12px;
+}
+.content {
+  margin: 0;
+}

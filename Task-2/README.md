@@ -3,31 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List App using TypeScript</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-        h2 {
-            color: #333;
-        }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 10px 0;
-        }
-    </style>
+    
 </head>
 <body>
     <h1>Todo List App using TypeScript</h1>

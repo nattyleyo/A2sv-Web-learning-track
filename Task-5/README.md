@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Form README</title>
-</head>
-<body>
+
   <h1>Contact Form Project</h1>
   <p>This project is a simple Contact Form built using React and the <code>useForm</code> hook. The form includes validation for required fields and email format, and demonstrates the usage of the <code>useForm</code> hook to manage form state and handle form submissions effectively.</p>
 
@@ -32,6 +25,3 @@
     <img src="/Task-5/src/assets/Screenshot-3.png" alt="Screenshot of Edit Task Feature" />
     <p>Screenshot 4:</p>
     <img src="/Task-5/src/assets/Screenshot-4.png" alt="Screenshot of Edit Task Feature" />
-
-</body>
-</html>

@@ -25,7 +25,7 @@
   </ul>
   <h2>Screenshots</h2>
     <p>Screenshot 1:</p>
-    <img src="/Task-5/asset/Screenshot-1.png" alt="Screenshot of Add Task Feature" />
+    <img src="/Task-5/src/assets/Screenshot-1.png" alt="Screenshot of Add Task Feature" />
     <p>Screenshot 2:</p>
     <img src="/Task-5/src/assets/Screenshot-2.png" alt="Screenshot of Edit Task Feature" />
     <p>Screenshot 3:</p>

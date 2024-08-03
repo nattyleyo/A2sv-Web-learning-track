@@ -24,6 +24,6 @@
     <p>Screenshot 1:</p>
     <img src="/task-6/public/assets/Screenshot-1.png" alt="Screenshot of Add Task Feature" />
     <p>Screenshot 2:</p>
-    <img src="/task-5/public/assets/Screenshot-2.png" alt="Screenshot of Edit Task Feature" />
+    <img src="/task-6/public/assets/Screenshot-2.png" alt="Screenshot of Edit Task Feature" />
     <p>Screenshot 3:</p>
-    <img src="/task-5/public/assets/Screenshot-3.png" alt="Screenshot of Edit Task Feature" />
+    <img src="/task-6/public/assets/Screenshot-3.png" alt="Screenshot of Edit Task Feature" />

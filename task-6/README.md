@@ -20,3 +20,10 @@
 <h3>UI References:</h3>
     <p><a href="Job Card UI">Job Card UI</a></p>
     <p><a href="Figma file">Figma file</a></p>
+<h2>Screenshots</h2>
+    <p>Screenshot 1:</p>
+    <img src="/task-6/public/assets/Screenshot-1.png" alt="Screenshot of Add Task Feature" />
+    <p>Screenshot 2:</p>
+    <img src="/task-5/public/assets/Screenshot-2.png" alt="Screenshot of Edit Task Feature" />
+    <p>Screenshot 3:</p>
+    <img src="/task-5/public/assets/Screenshot-3.png" alt="Screenshot of Edit Task Feature" />

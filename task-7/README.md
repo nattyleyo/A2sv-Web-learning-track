@@ -1,29 +1,60 @@
- <h1>Job Listing Application README</h1>
-    <p>Welcome to the Job Listing Application task series! Throughout this series, 
-    <h2>Task 6: Building Job Listing Application</h2>
-    
-<h3>Objective:</h3>
-    <p>task is to create a React component for a card resembling the provided design. Populate this card with dummy data, include an avatar image, and create the Job Listing Dashboard.</p>
+<h1>Task 7: Integrating API Data into the Application</h1>
+<h2>Objective:</h2>
+    <p>Integrate data from a provided API endpoint into your application and populate the cards with this fetched data.</p>
+<h2>Steps:</h2>
 
-<h3>Steps:</h3>
-    <ul class="task-list">
-        <li>Design the Card: Create a React component that visually represents the card as closely as possible to the provided image. Pay attention to details such as layout, colors, and typography.</li>
-        <li>Use the given JSON Data to Populate the Card: Use the dummy data to populate the card.</li>
-        <li>Add Avatar Image: Utilize the provided avatar image URL to incorporate an avatar image into the card. Ensure that the image is displayed properly within the designated area of the card.</li>
-        <li>Create the Applicants Dashboard: Utilize Tailwind CSS to create the Description of the Jobs.</li>
-        <li>Reach Out for Assistance: If you encounter any difficulties or have questions during the development process, do not hesitate to reach out to your mentors for assistance. They are here to support you and help you succeed in completing this task.</li>
+<h3>Checkout API Endpoint:</h3>
+    <ul>
+        <li>Navigate to the provided API endpoint.</li>
+        <li>Familiarize yourself with the structure of the data returned by the endpoint, including the fields and format.</li>
     </ul>
 
-<h3>JSON Data:</h3>
-    <p><a href="JSON Data Link">JSON Data Link</a></p>
+<h3>Fetch Data from Endpoint:</h3>
+    <ul>
+        <li>Within your application, implement a function to fetch data from the API endpoint.</li>
+        <li>Use appropriate methods such as <code>fetch()</code> or libraries like Axios to make an HTTP request to the endpoint.</li>
+        <li>Ensure that the fetched data is an array of objects that you can use to populate the cards in the next step.</li>
+    </ul>
+
+<h3>Populate Cards with Fetched Data:</h3>
+    <ul>
+        <li>Modify your application logic to replace the existing dummy data with the data fetched from the API endpoint.</li>
+        <li>Populate the cards in your application with the fetched data, ensuring that each card corresponds to an object in the array.</li>
+        <li>Display relevant information from the fetched data within each card, such as name, title, description, etc.</li>
+    </ul>
+
+<h3>Reach Out for Assistance:</h3>
+    <ul>
+        <li>If you encounter any challenges while fetching or integrating the API data into your application, don't hesitate to reach out to your mentors for assistance.</li>
+        <li>Your mentors are available to provide guidance and support throughout the process.</li>
+    </ul>
+
+<h2>Additional Information:</h2>
+    <ul>
+        <li>Ensure that your application handles errors gracefully, such as handling failed API requests or invalid data responses.</li>
+        <li>Maintain clean and well-organized code, adhering to best practices and coding conventions.</li>
+    </ul>
+
+<h2>API Endpoint:</h2>
+    <p>Documentation: <a href="https://documenter.getpostman.com/view/27955515/2sA3rwMEUX">Postman Documentation</a></p>
+    <p>Base URL: <a href="https://akil-backend.onrender.com/">https://akil-backend.onrender.com/</a></p>
+
+<h3>Available Endpoints:</h3>
+    <ul>
+        <li>Get opportunities: <code>/opportunities/search</code> (GET)</li>
+        <li>Get opportunity by ID: <code>/opportunities/:id</code> (GET)</li>
+        <ul>
+            <li>Example: <code>/opportunities/6526382983jsdu8d7</code></li>
+        </ul>
+    </ul>
 
 <h3>UI References:</h3>
     <p><a href="Job Card UI">Job Card UI</a></p>
     <p><a href="Figma file">Figma file</a></p>
 <h2>Screenshots</h2>
     <p>Screenshot 1:</p>
-    <img src="/task-6/public/assets/Screenshot-1.png" alt="Screenshot of Add Task Feature" />
+    <img src="/task-7/public/assets/Screenshot-1.png" alt="Screenshot of Add Task Feature" />
     <p>Screenshot 2:</p>
-    <img src="/task-6/public/assets/Screenshot-2.png" alt="Screenshot of Edit Task Feature" />
+    <img src="/task-7/public/assets/Screenshot-2.png" alt="Screenshot of Edit Task Feature" />
     <p>Screenshot 3:</p>
-    <img src="/task-6/public/assets/Screenshot-3.png" alt="Screenshot of Edit Task Feature" />
+    <img src="/task-7/public/assets/Screenshot-3.png" alt="Screenshot of Edit Task Feature" />

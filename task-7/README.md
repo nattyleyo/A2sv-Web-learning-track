@@ -23,18 +23,6 @@
         <li>Display relevant information from the fetched data within each card, such as name, title, description, etc.</li>
     </ul>
 
-<h3>Reach Out for Assistance:</h3>
-    <ul>
-        <li>If you encounter any challenges while fetching or integrating the API data into your application, don't hesitate to reach out to your mentors for assistance.</li>
-        <li>Your mentors are available to provide guidance and support throughout the process.</li>
-    </ul>
-
-<h2>Additional Information:</h2>
-    <ul>
-        <li>Ensure that your application handles errors gracefully, such as handling failed API requests or invalid data responses.</li>
-        <li>Maintain clean and well-organized code, adhering to best practices and coding conventions.</li>
-    </ul>
-
 <h2>API Endpoint:</h2>
     <p>Documentation: <a href="https://documenter.getpostman.com/view/27955515/2sA3rwMEUX">Postman Documentation</a></p>
     <p>Base URL: <a href="https://akil-backend.onrender.com/">https://akil-backend.onrender.com/</a></p>

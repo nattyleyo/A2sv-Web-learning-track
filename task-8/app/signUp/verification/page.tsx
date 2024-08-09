@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import VerifyComp from "@/app/components/VerifyComp";
 
 interface OTPType {

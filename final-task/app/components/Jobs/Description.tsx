@@ -42,14 +42,12 @@ const Description = ({
         <div className="flex flex-col gap-4">
           <h1 className=" text-2xl font-bold">Ideal Candidate We want</h1>
           <ul className="flex flex-col text-base text-text-1 gap-2">
-            {/* <li className="font-bold list-disc">{}</li> */}
-            {/* <li className="font-bold list-disc">{}</li> */}
             <li className=" list-disc">{idealCandidate}</li>
           </ul>
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="text-2xl font-bold">When & Where</h1>
-          <p className="flex gap-2 items-center text-base text-text-1">
+          <div className="flex gap-2 items-center text-base text-text-1">
             <div className="boxi p-2.5 rounded-full border-px text-text-6 text-lg">
               <Image
                 src={imgUrl}
@@ -60,7 +58,7 @@ const Description = ({
               />
             </div>
             {whenAndWhere}
-          </p>
+          </div>
         </div>
       </div>
       <RightBox descId={id} />

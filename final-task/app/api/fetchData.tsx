@@ -12,7 +12,7 @@ export type FormType = {
 };
 type verifyType = {
   email: string;
-  OTP: string;
+  otp: string;
 };
 export async function fetchData() {
   try {
@@ -82,18 +82,12 @@ export async function fetchSignUp(data: FormType) {
 }
 
 export async function VerifyEmail(data: verifyType) {
-  const { email, OTP } = data;
-
   const res = await fetch(`https://akil-backend.onrender.com/verify-email`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ email, OTP }),
+    body: JSON.stringify(data),
   });
-  // if (!res.success) {
-  //   const errorResponse = await res.json();
-  //   throw new Error(errorResponse.message);
-  // }
   return res.json();
 }

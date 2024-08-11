@@ -26,21 +26,22 @@ const SignUpComp = () => {
   const confirmData = watch("password");
 
   const onSubmit = async (data: FormType) => {
-    data.role = "";
     console.log(data);
     const res = await signIn("credentials", {
       name: data.name,
       email: data.email,
       password: data.password,
       confirmPassword: data.confirmPassword,
-      role: "",
+      role: "user",
       redirect: false,
     });
     if (res?.error) {
       setErrorSignUp(`* ${res?.error}`);
     } else {
       setErrorSignUp(`* Successfully Registered`);
-      router.push("signUp/verification");
+      router.push(
+        `/signUp/verification?email=${encodeURIComponent(data.email)}`
+      );
       alert(`I got you data as ${res?.ok}`);
     }
   };

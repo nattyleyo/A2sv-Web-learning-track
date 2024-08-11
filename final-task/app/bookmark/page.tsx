@@ -69,9 +69,9 @@ const Bookmark = () => {
   return (
     <>
       <NavBar />
-      <main className="w-full flex flex-col gap-16 py-20 px-32">
-        <div className="flex flex-col justify-start gap-6 z-0">
-          <div className="max-w-4xl flex justify-between items-center">
+      <main className="w-full flex flex-col justify-center gap-16 py-20 px-32">
+        <div className=" flex flex-col items-center gap-6 z-0">
+          <div className="tittle w-full max-w-4xl flex grow justify-between">
             <div className="flex flex-col gap-2">
               <h1 className="text-4xl font-bold">Bookmarks</h1>
               <h3 className="text-base text-text-2">
@@ -98,7 +98,7 @@ const Bookmark = () => {
               bookmarkedJobs[job.id] && (
                 <div
                   key={job.id}
-                  className="flex max-w-4xl gap-6 border-2 border-solid border-bd-1 py-8 px-8 bg-white justify-between rounded-3xl hover:bg-blue-50 cursor-pointer"
+                  className="flex w-full max-w-4xl gap-6 border-2 border-solid border-bd-1 py-8 px-8 bg-white justify-between rounded-3xl hover:bg-blue-50 cursor-pointer"
                 >
                   <Link href={`/desc/${job.id}`} passHref>
                     <JobCard {...job} />

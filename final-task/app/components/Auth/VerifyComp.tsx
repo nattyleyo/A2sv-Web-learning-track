@@ -1,9 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { VerifyEmail } from "../../api/fetchData";
 import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 type verifyType = {
   email: string;
@@ -12,13 +13,10 @@ type verifyType = {
 };
 
 const VerificationForm = () => {
-  const { handleSubmit, control, watch } = useForm<verifyType>({
-    defaultValues: {
-      otp: ["", "", "", ""],
-    },
-  });
+  const { handleSubmit, register, watch, setValue } = useForm<verifyType>();
   const [errorVerify, setErrorVerify] = useState("");
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const [timeLeft, setTimeLeft] = useState(60);
 
@@ -30,17 +28,16 @@ const VerificationForm = () => {
     return () => clearInterval(timerId);
   }, [timeLeft]);
 
-  const otpValues = watch("otp");
+  const otpValues = watch("otp", ["", "", "", ""]);
   const isButtonDisabled = otpValues.some((digit) => digit === "");
 
-  const handleChange = (
+  const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement>,
-    index: number,
-    onChange: (...event: any[]) => void
+    index: number
   ) => {
     const value = e.target.value;
     if (/^[0-9]$/.test(value) || value === "") {
-      onChange(value);
+      setValue(`otp.${index}`, value);
 
       // Focus the next input field if a digit is entered
       if (value && index < 3) {
@@ -53,8 +50,11 @@ const VerificationForm = () => {
   };
 
   const onSubmit = async (data: verifyType) => {
+    const email = searchParams.get("email") as string;
+    const otp = data.otp.join("") as string;
+    console.log({ email: email, otp: otp }, "send");
     try {
-      const res = await VerifyEmail(data);
+      const res = await VerifyEmail({ email: email, otp: otp });
       if (!res.success) {
         setErrorVerify("Invalid OTP");
       } else {
@@ -65,9 +65,10 @@ const VerificationForm = () => {
       setErrorVerify("An unexpected error occurred, please try again later.");
     }
   };
+
   const resend = () => {
     setTimeLeft(60);
-    setErrorVerify("new OTP send to your email");
+    setErrorVerify("new OTP sent to your email");
   };
 
   return (
@@ -92,21 +93,15 @@ const VerificationForm = () => {
 
       <div className="w-full name-box flex gap-4 justify-center">
         {otpValues.map((_, index) => (
-          <Controller
+          <input
             key={index}
-            name={`otp.${index}`}
-            control={control}
-            render={({ field: { onChange, value } }) => (
-              <input
-                type="text"
-                id={`otp-input-${index}`}
-                maxLength={1}
-                value={value}
-                onChange={(e) => handleChange(e, index, onChange)}
-                placeholder="0"
-                className="name w-full flex grow text-center px-6 py-6 gap-3 border-bd-1 border-solid border-2 rounded-lg  text-3x1  placeholder:text-3x1 text-text-3 focus:border-purple-600 outline-none"
-              />
-            )}
+            type="text"
+            id={`otp-input-${index}`}
+            maxLength={1}
+            {...register(`otp.${index}`)}
+            onChange={(e) => handleInputChange(e, index)}
+            placeholder="0"
+            className="name w-full flex grow text-center px-6 py-6 gap-3 border-bd-1 border-solid border-2 rounded-lg  text-3x1  placeholder:text-3x1 text-text-3 focus:border-purple-600 outline-none"
           />
         ))}
       </div>

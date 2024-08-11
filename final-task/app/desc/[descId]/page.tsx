@@ -9,19 +9,14 @@ import Description from "@/app/components/Jobs/Description";
 import NavBar from "@/app/components/Nav/NavBar";
 
 const DescData = ({ params }: { params: { descId: string } }) => {
-  const jobsData = useAppSelector((state) => state.jobData);
+  const jobsData = useAppSelector((state) => state.data);
 
-  if (jobsData.loading) {
-    return <p>Loading...</p>;
+  if (!jobsData) {
+    return <p>Unable to find job description</p>;
   }
 
-  if (jobsData.error) {
-    return <p>Error: {jobsData.error}</p>;
-  }
-
-  const jobs = jobsData.data; // Access the jobs array
+  const jobs = jobsData; // Access the jobs array
   const data = jobs.find((job: JobData) => job.id === params.descId);
-
   if (!data) {
     return <p>Job not found</p>;
   }

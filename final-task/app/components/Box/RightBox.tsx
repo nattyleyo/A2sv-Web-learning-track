@@ -12,9 +12,8 @@ type RType = {
   // calRig: string;
 };
 const RightBox = ({ descId }: RType) => {
-  const jobsData = useAppSelector((state) => state.jobData);
-  const jobs = jobsData.data;
-  const data = jobs.find((job: JobData) => job.id === descId);
+  const jobsData = useAppSelector((state) => state.data);
+  const data = jobsData.find((job: JobData) => job.id === descId);
 
   if (!data) {
     return <p>Job not found</p>;

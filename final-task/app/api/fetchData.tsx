@@ -91,7 +91,6 @@ export async function VerifyEmail(data: verifyType) {
     },
     body: JSON.stringify({ email, OTP }),
   });
-  console.log(res, "from optionnnnnnnnnnnnnn");
   // if (!res.success) {
   //   const errorResponse = await res.json();
   //   throw new Error(errorResponse.message);

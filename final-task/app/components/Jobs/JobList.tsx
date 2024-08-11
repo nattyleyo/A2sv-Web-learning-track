@@ -14,14 +14,13 @@ import { BookmarkCrud, getBookmarks } from "@/app/api/bookmarks";
 
 const JobList = () => {
   const { data: session } = useSession();
-  const jobsData: any = useAppSelector((state) => state.jobData.data);
+  const jobsData: any = useAppSelector((state) => state.data);
   const [bookmarkedJobs, setBookmarkedJobs] = useState<{
     [key: string]: boolean;
   }>({});
 
   const accessToken = session?.user?.accessToken;
 
-  console.log(jobsData);
   useEffect(() => {
     const fetchBookmarks = async () => {
       if (accessToken) {

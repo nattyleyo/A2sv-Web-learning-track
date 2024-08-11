@@ -17,7 +17,6 @@ const LoginComp = () => {
   const { errors } = formState;
   const Router = useRouter();
   const x = useSession();
-  console.log(x);
   const [errorLogin, setErrorLogin] = useState(String);
 
   const onSubmit = async (data: FormType) => {
@@ -27,7 +26,6 @@ const LoginComp = () => {
       // redirect: ,
       // callbackUrl: "/",
     });
-    console.log(res);
     if (res?.error) {
       setErrorLogin(`* ${res?.error}`);
     } else {

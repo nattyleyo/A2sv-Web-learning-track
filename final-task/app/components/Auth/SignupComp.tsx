@@ -16,7 +16,6 @@ type FormType = {
 };
 const SignUpComp = () => {
   const { data: session } = useSession();
-  console.log(session, 55555555555555555555555);
 
   const form = useForm<FormType>();
   const { register, handleSubmit, formState, watch } = form;
@@ -37,7 +36,6 @@ const SignUpComp = () => {
       role: "",
       redirect: false,
     });
-    console.log(res, 11111111111111111);
     if (res?.error) {
       setErrorSignUp(`* ${res?.error}`);
     } else {

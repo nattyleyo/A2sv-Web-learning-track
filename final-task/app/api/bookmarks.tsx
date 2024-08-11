@@ -19,7 +19,6 @@ export async function BookmarkCrud(
 
       const res = await fetch(endpoint, requestOptions);
       const result = await res.json();
-      console.log(result, "gfffffffffffffffffff");
       if (!res.ok) {
         throw new Error(
           `${!isBookmark ? "Adding" : "Removing"} bookmark failed`
@@ -49,7 +48,6 @@ export async function getBookmarks(accessToken: string) {
 
       const res = await fetch(endpoint, requestOptions);
       const { data } = await res.json();
-      console.log(data, "get data from bookmarks : ");
       if (!res.ok) {
         throw new Error(`get bookmark failed`);
       }

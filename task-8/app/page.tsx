@@ -1,6 +1,5 @@
 // app/page.tsx
 import { fetchData } from "./api/fetchData";
-import JobList from "./components/JobList";
 import NavBar from "./components/Nav/NavBar";
 import DispatchJobData from "./redux/DispatchJobData"; // Import the dispatch component
 

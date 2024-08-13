@@ -3,14 +3,10 @@ import React, { useEffect, useState } from "react";
 import JobCard from "../Jobs/JobCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { faBookmark as faBookmarkRegular } from "@fortawesome/free-regular-svg-icons";
-import { faBookmark as faBookmarkSolid } from "@fortawesome/free-solid-svg-icons";
-
-import Link from "next/link";
-import { JobData } from "../../redux/slices/jobsData/jobsdataSlice";
 import { useAppSelector } from "../../redux/store/store";
 import { useSession } from "next-auth/react";
 import { BookmarkCrud, getBookmarks } from "@/app/api/bookmarks";
+import { JobData } from "@/app/redux/slices/jobsData/jobsdataSlice";
 
 const JobList = () => {
   const { data: session } = useSession();
@@ -24,9 +20,9 @@ const JobList = () => {
   useEffect(() => {
     const fetchBookmarks = async () => {
       if (accessToken) {
-        const res: [] = await getBookmarks(accessToken);
-        const tempObj: { [key: string] } = {};
-        res.map((bookmark) => {
+        const res: any[] = await getBookmarks(accessToken);
+        const tempObj: { [key: string]: boolean } = {};
+        res.forEach((bookmark) => {
           tempObj[bookmark.eventID] = true;
         });
         setBookmarkedJobs(tempObj);
@@ -57,7 +53,11 @@ const JobList = () => {
   };
 
   if (!jobsData || jobsData.length === 0) {
-    return <p className="text-purple-600">loading....</p>;
+    return (
+      <div className="flex justify-center">
+        <p className="text-purple-600">No jobs found.</p>
+      </div>
+    );
   }
 
   return (
@@ -79,20 +79,13 @@ const JobList = () => {
           </button>
         </div>
       </div>
-      {jobsData.map((job: JobData, index: number) => (
-        <div
-          key={index}
-          className="flex max-w-4xl gap-6 border-2 border-solid border-bd-1 py-8 px-8 bg-white justify-between rounded-3xl hover:bg-blue-50 cursor-pointer"
-        >
-          <Link href={`/desc/${job.id}`} passHref>
-            <JobCard {...job} />
-          </Link>
-          <FontAwesomeIcon
-            onClick={() => handleBookmark(job.id!)}
-            icon={bookmarkedJobs[job.id] ? faBookmarkSolid : faBookmarkRegular} // Toggle icon
-            className="text-3xl text-purple-700"
-          />
-        </div>
+      {jobsData.map((job: JobData) => (
+        <JobCard
+          key={job.id}
+          {...job}
+          isBookmarked={bookmarkedJobs[job.id]}
+          onBookmarkToggle={handleBookmark}
+        />
       ))}
     </div>
   );

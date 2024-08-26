@@ -52,27 +52,22 @@ cd job-position-listing
     <img src="/final-task/public/assets/Screenshot-1.png" alt="Screenshot of Add Task Feature" />
     <p>Screenshot 1.2:</p>
     <img src="/final-task/public/assets/Screenshot-2.png" alt="Screenshot of Edit Task Feature" />
-    <p>Screenshot 1.3:</p>
-    <img src="/final-task/public/assets/Screenshot-12.png" alt="Screenshot of Edit Task Feature" />
     <p>Screenshot 2.1:</p>
-    <img src="/final-task/public/assets/Screenshot-13.png" alt="Screenshot of Edit Task Feature" />
-    <p>Screenshot 2.2:</p>
     <img src="/final-task/public/assets/Screenshot-3.png" alt="Screenshot of Edit Task Feature" />
-    <p>Screenshot 2.3:</p>
+    <p>Screenshot 2.2:</p>
     <img src="/final-task/public/assets/Screenshot-4.png" alt="Screenshot of Edit Task Feature" />
-    <p>Screenshot 2.4:</p>
+    <p>Screenshot 2.3:</p>
     <img src="/final-task/public/assets/Screenshot-5.png" alt="Screenshot of Edit Task Feature" />
-    <p>Screenshot 2.5:</p>
+    <p>Screenshot 2.4:</p>
     <img src="/final-task/public/assets/Screenshot-6.png" alt="Screenshot of Edit Task Feature" />
-    <p>Screenshot 2.6:</p>
+    <p>Screenshot 2.5:</p>
     <img src="/final-task/public/assets/Screenshot-7.png" alt="Screenshot of Edit Task Feature" />
-    <p>Screenshot 2.7:</p>
+    <p>Screenshot 2.6:</p>
     <img src="/final-task/public/assets/Screenshot-8.png" alt="Screenshot of Edit Task Feature" />
-    <p>Screenshot 2.8:</p>
+    <p>Screenshot 2.7:</p>
     <img src="/final-task/public/assets/Screenshot-9.png" alt="Screenshot of Edit Task Feature" />
-    <p>Screenshot 2.8:</p>
-    <img src="/final-task/public/assets/Screenshot-9.png" alt="Screenshot of Edit Task Feature" />
-    <p>Screenshot 3.0:</p>
+    
+<p>Screenshot 3.0:</p>
     <img src="/final-task/public/assets/Screenshot-10.png" alt="Screenshot of Edit Task Feature" />
     <p>Screenshot 3.1:</p>
     <img src="/final-task/public/assets/Screenshot-11.png" alt="Screenshot of Edit Task Feature" />

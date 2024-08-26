@@ -72,13 +72,13 @@ const mockJobData: JobData[] = [
 ];
 
 export default mockJobData;
-// app/api/__mocks__/bookmarks.ts
-export const getBookmarks = jest.fn(async (accessToken: string) => {
-  // Return mock data as if it was fetched from an API
-  return [
-    { eventID: "1", jobTitle: "Software Engineer" },
-    { eventID: "2", jobTitle: "Product Manager" },
-  ];
-});
+// // app/api/__mocks__/bookmarks.ts
+// export const getBookmarks = jest.fn(async (accessToken: string) => {
+//   // Return mock data as if it was fetched from an API
+//   return [
+//     { eventID: "1", jobTitle: "Software Engineer" },
+//     { eventID: "2", jobTitle: "Product Manager" },
+//   ];
+// });
 
-export const BookmarkCrud = jest.fn(); // Mock the BookmarkCrud function as well if needed
+// export const BookmarkCrud = jest.fn(); // Mock the BookmarkCrud function as well if needed

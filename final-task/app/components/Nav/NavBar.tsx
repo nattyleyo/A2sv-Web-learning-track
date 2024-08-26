@@ -9,11 +9,17 @@ const NavBar = () => {
   const { data: session } = useSession();
   const router = useRouter();
   return (
-    <header className="bg-white opacity-100 shadow-md w-full h-20 flex fixed backdrop:blur-3xl z-50 top-0 left-0 gap-4 px-8 py-6 font-medium">
+    <header
+      data-header="header"
+      className="bg-white opacity-100 shadow-md w-full h-20 flex fixed backdrop:blur-3xl z-50 top-0 left-0 gap-4 px-8 py-6 font-medium"
+    >
       <div className="flex grow justify-start text-2xl font-bold min-w-14 w-1/4 text-purple-600">
         LOGO.
       </div>
-      <nav className="w-1/2 flex grow gap-7 justify-center items-center">
+      <nav
+        data-nav="nav"
+        className="w-1/2 flex grow gap-7 justify-center items-center"
+      >
         <button
           onClick={() => {
             router.push("/");
@@ -39,6 +45,7 @@ const NavBar = () => {
           Voluntering
         </button>
         <button
+          data-book="bookmark-link"
           onClick={() => {
             router.push("/bookmark");
           }}

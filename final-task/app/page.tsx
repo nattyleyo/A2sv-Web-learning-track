@@ -13,11 +13,14 @@ const Home = async () => {
     <>
       <NavBar />
       {session && (
-        <main className="flex flex-col gap-16 py-20 px-32">
+        <main
+          data-testid="dispatch-job-data"
+          className="flex flex-col gap-16 py-20 px-32"
+        >
           <DispatchJobData jobData={result} />
         </main>
       )}
-      {!session && <LoginComp />}
+      {!session && <LoginComp data-form="login-form" />}
     </>
   );
 };

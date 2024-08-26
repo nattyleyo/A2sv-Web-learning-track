@@ -58,6 +58,7 @@ const LoginComp = () => {
         </label>
         <input
           type="email"
+          data-inp="email"
           className="email flex px-3 py-4 gap-3 border-bd-1 border-solid border-2 rounded-lg placeholder:text-base text-text-3 focus:border-purple-600 outline-none"
           placeholder="Enter email address"
           {...register("email", {
@@ -94,6 +95,7 @@ const LoginComp = () => {
         </label>
         <input
           type="password"
+          data-inp="password"
           className="password flex px-3 py-4 gap-3 border-bd-1 border-solid border-2 rounded-lg placeholder:text-base text-text-3 focus:border-purple-600 outline-none"
           placeholder="Enter password"
           {...register("password", {
@@ -114,7 +116,10 @@ const LoginComp = () => {
         </p>
       </div>
 
-      <button className="flex w-full py-3 px-6 items-center justify-center bg-purple-700 rounded-full text-white">
+      <button
+        data-btn="login"
+        className="flex w-full py-3 px-6 items-center justify-center bg-purple-700 rounded-full text-white"
+      >
         Login
       </button>
       <Link href={"/signUp"}>

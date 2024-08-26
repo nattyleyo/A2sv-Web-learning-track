@@ -24,7 +24,10 @@ const JobCard = ({
   const defaultLogoUrl = "/assets/im.png";
 
   return (
-    <div className="flex max-w-4xl gap-6 border-2 border-solid border-bd-1 py-8 px-8 bg-white justify-between rounded-3xl hover:bg-blue-50 cursor-pointer">
+    <div
+      data-job-card="job-card"
+      className="flex max-w-4xl gap-6 border-2 border-solid border-bd-1 py-8 px-8 bg-white justify-between rounded-3xl hover:bg-blue-50 cursor-pointer"
+    >
       <Link href={`/desc/${id}`} passHref>
         <div className="max-w-4xl flex gap-6">
           <Image

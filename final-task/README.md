@@ -1,60 +1,48 @@
-<h1>Task 7:User Authentication Implementation</h1>
+<h1>Final-task: Job Position Listing Application - Bookmark Functionality</h1>
 
-<section>
-        <h2>Overview</h2>
-        <p>This project implements user authentication using NextAuth, including signup and signin functionality. The signup and signin pages are designed with attention to layout, forms, and usability, integrating with provided API endpoints for secure user registration and authentication.</p>
-    </section>
+<h2>Overview</h2>
+    <p>This application allows users to browse job positions and bookmark their favorites. The bookmark feature is available only to authenticated users, enabling them to save or remove job positions from their bookmarked list.</p>
 
-<section>
-        <h2>Features</h2>
-        <ul>
-            <li><strong>Signup and Signin Pages:</strong> Two separate components for user signup and signin, designed following best practices for usability and accessibility.</li>
-            <li><strong>Signup Logic:</strong> Captures user input, sends a POST request to the <code>/signup</code> endpoint, and handles server responses.</li>
-            <li><strong>Signin Logic:</strong> Captures user input, sends a POST request to the <code>/login</code> endpoint, retrieves the access token, and manages authentication status.</li>
-            <li><strong>Client-Side Validation:</strong> Implements input validation to enhance user experience and minimize unnecessary server requests.</li>
-            <li><strong>Security:</strong> Secure handling of sensitive user data, such as passwords and access tokens.</li>
-        </ul>
-    </section>
+<h2>Features</h2>
+    <ul>
+        <li><strong>Bookmark Toggle:</strong> Users can bookmark or unbookmark job positions.</li>
+        <li><strong>Authentication Restriction:</strong> Only authenticated users can use the bookmark feature.</li>
+        <li><strong>Error Handling:</strong> Provides feedback for successful or failed bookmark actions.</li>
+    </ul>
 
-<section>
-        <h2>API Endpoints</h2>
-        <p><strong>Base URL:</strong> <a href="https://akil-backend.onrender.com/" target="_blank">https://akil-backend.onrender.com/</a></p>
+<h2>Technologies Used</h2>
+    <ul>
+        <li><strong>Frontend:</strong> React.js, Next.js, Tailwind CSS</li>
+        <li><strong>Testing:</strong> Jest, Cypress</li>
+    </ul>
 
-<h3>Signup:</h3>
-        <p><strong>POST</strong> <code>/signup</code></p>
-        <div class="code-block">
-            <pre>
-{
-    "name": "string",
-    "email": "string",
-    "password": "string",
-    "confirmPassword": "string",
-    "role": "string"
-}
-            </pre>
-        </div>
+<h2>Installation</h2>
+    <p><strong>Clone the repository:</strong></p>
+    <pre><code>git clone https://github.com/your-username/job-position-listing.git
+cd job-position-listing
+</code></pre>
 
-<h3>Verify Email:</h3>
-        <p><strong>POST</strong> <code>/verify-email</code></p>
-        <div class="code-block">
-            <pre>
-{
-    "email": "string",
-    "OTP": "string"
-}
-            </pre>
-        </div>
-<h3>Signin:</h3>
-        <p><strong>POST</strong> <code>/login</code></p>
-        <div class="code-block">
-            <pre>
-{
-    "email": "string",
-    "password": "string"
-}
-            </pre>
-        </div>
-    </section>
+<p><strong>Install dependencies:</strong></p>
+    <pre><code>npm install</code></pre>
+
+<p><strong>Start the application:</strong></p>
+    <pre><code>npm run dev</code></pre>
+
+<p><strong>Configure the backend (Base URL):</strong></p>
+    <pre><code>https://akil-backend.onrender.com/</code></pre>
+
+<h2>API Endpoints</h2>
+    <ul>
+        <li><strong>Get Bookmarks:</strong> <code>/bookmarks</code> (GET)</li>
+        <li><strong>Create Bookmark:</strong> <code>/bookmarks/:eventID</code> (POST)</li>
+        <li><strong>Unbookmark:</strong> <code>/bookmarks/:eventID</code> (DELETE)</li>
+    </ul>
+
+<h2>Testing</h2>
+    <ul>
+        <li><strong>Unit Tests (Jest):</strong> Tests for the bookmark functionality and components.</li>
+        <li><strong>End-to-End Tests (Cypress):</strong> Simulates user interactions like bookmarking and unbookmarking jobs.</li>
+    </ul>
 
 <h3>UI References:</h3>
     <p><a href="Job Card UI">Job Card UI</a></p>
@@ -76,3 +64,17 @@
     <img src="/final-task/public/assets/Screenshot-5.png" alt="Screenshot of Edit Task Feature" />
     <p>Screenshot 2.5:</p>
     <img src="/final-task/public/assets/Screenshot-6.png" alt="Screenshot of Edit Task Feature" />
+    <p>Screenshot 2.6:</p>
+    <img src="/final-task/public/assets/Screenshot-7.png" alt="Screenshot of Edit Task Feature" />
+    <p>Screenshot 2.7:</p>
+    <img src="/final-task/public/assets/Screenshot-8.png" alt="Screenshot of Edit Task Feature" />
+    <p>Screenshot 2.8:</p>
+    <img src="/final-task/public/assets/Screenshot-9.png" alt="Screenshot of Edit Task Feature" />
+    <p>Screenshot 2.8:</p>
+    <img src="/final-task/public/assets/Screenshot-9.png" alt="Screenshot of Edit Task Feature" />
+    <p>Screenshot 3.0:</p>
+    <img src="/final-task/public/assets/Screenshot-10.png" alt="Screenshot of Edit Task Feature" />
+    <p>Screenshot 3.1:</p>
+    <img src="/final-task/public/assets/Screenshot-11.png" alt="Screenshot of Edit Task Feature" />
+    <p>Screenshot 3.2:</p>
+    <img src="/final-task/public/assets/Screenshot-12.png" alt="Screenshot of Edit Task Feature" />
